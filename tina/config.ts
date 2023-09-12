@@ -775,8 +775,8 @@ export default defineConfig({
       {
         format: "md",
         label: "Főoldal",
-        name: "f_oldal",
-        path: "content",
+        name: "f_oldal_en",
+        path: "en/content",
         frontmatterFormat: "toml",
         frontmatterDelimiters: "---",
         ui: {
@@ -1128,8 +1128,8 @@ export default defineConfig({
       {
         format: "md",
         label: "Kapcsolat",
-        name: "kapcsolat",
-        path: "content",
+        name: "kapcsolat_en",
+        path: "en/content",
         frontmatterFormat: "toml",
         frontmatterDelimiters: "---",
         ui: {
@@ -1249,8 +1249,8 @@ export default defineConfig({
       {
         format: "md",
         label: "Kezelések",
-        name: "kezel_sek",
-        path: "content/treatments",
+        name: "kezel_sek_en",
+        path: "en/content/treatments",
         frontmatterFormat: "toml",
         frontmatterDelimiters: "---",
         match: {
@@ -1271,8 +1271,8 @@ export default defineConfig({
       {
         format: "md",
         label: "Csapatunk",
-        name: "csapatunk",
-        path: "content/team",
+        name: "csapatunk_en",
+        path: "en/content/team",
         frontmatterFormat: "toml",
         frontmatterDelimiters: "---",
         match: {
@@ -1293,8 +1293,8 @@ export default defineConfig({
       {
         format: "md",
         label: "Áraink",
-        name: "_raink",
-        path: "content/pages",
+        name: "_raink_en",
+        path: "en/content/pages",
         frontmatterFormat: "toml",
         frontmatterDelimiters: "---",
         ui: {
@@ -1377,8 +1377,8 @@ export default defineConfig({
       {
         format: "md",
         label: "Rólunk",
-        name: "r_lunk",
-        path: "content/pages",
+        name: "r_lunk_en",
+        path: "en/content/pages",
         frontmatterFormat: "toml",
         frontmatterDelimiters: "---",
         ui: {
@@ -1450,8 +1450,8 @@ export default defineConfig({
       {
         format: "md",
         label: "CBCT",
-        name: "cbct",
-        path: "content/pages",
+        name: "cbct_en",
+        path: "en/content/pages",
         frontmatterFormat: "toml",
         frontmatterDelimiters: "---",
         ui: {
