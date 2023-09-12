@@ -1,8 +1,5 @@
-+++
-_template = "prices"
-+++
-
 ---
+_template: "prices"
 title: Áraink
 layout: prices
 types: pages

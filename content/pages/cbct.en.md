@@ -1,15 +1,13 @@
-+++
-_template = "cbct"
-+++
-
 ---
+_template: "cbct"
 title: CBCT
 layout: cbct
 types: pages
 image_1: "/uploads/images/cbct/1.jpg"
 image_2: "/uploads/images/cbct/2.jpg"
-head: 'Képalkotó diagnosztika: Röntgen, CBCT'
-description: "                A 2021-ben nyílt új rendelőnk egyik legfontosabb fejlesztése:
+head: "Képalkotó diagnosztika: Röntgen, CBCT"
+description:
+  "                A 2021-ben nyílt új rendelőnk egyik legfontosabb fejlesztése:
   <br><br>A digitális kisröntgen felvételek mellett, most már rendelkezésünkre áll
   digitális panoráma felvétel is, továbbá 3 dimenziós képalkotást lehetővé tevő CBCT
   készülék is. <br><br>Minden specialistánk kezelésének professzinális kiegészítése
@@ -22,5 +20,4 @@ description: "                A 2021-ben nyílt új rendelőnk egyik legfontosab
   egyik legfontosabb eleme. <br><br>Amennyiben valamelyik másik rendelőből irányították
   hozzánk felvétel készítése céljából, kérjük hívja rendelői telefonszámunkat időpont
   egyeztetés érdekében: "
-
 ---

@@ -1,8 +1,5 @@
-+++
-_template = "prices_en"
-+++
-
 ---
+_template: "prices_en"
 title: Prices
 layout: prices
 types: pages

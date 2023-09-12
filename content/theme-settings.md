@@ -1,8 +1,5 @@
-+++
-_template = "theme_settings"
-+++
-
 ---
+_template: "theme_settings"
 theme: Theme 1
 banner: "/uploads/images/pattern/bg_100.png"
 ---

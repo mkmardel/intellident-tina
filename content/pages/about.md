@@ -1,8 +1,5 @@
-+++
-_template = "about_template"
-+++
-
 ---
+_template: "about_template"
 title: Rólunk
 layout: about
 types: pages

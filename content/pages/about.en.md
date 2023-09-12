@@ -1,8 +1,5 @@
-+++
-_template = "about_template"
-+++
-
 ---
+_template: "about_template"
 title: About Us
 layout: about
 types: pages
