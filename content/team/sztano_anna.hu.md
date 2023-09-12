@@ -12,4 +12,10 @@ bio =  """2021 szeptemberében kezdtem fogászati asszisztensnek tanulni, melyne
 Terveim között szerepel az iTop szájhigiénia és a dentálhigiénikus képzés elvégzése.
 Nyelvismeret: angol, német
 """
+
+[[test]]
+title = "test1"
+
+[[test]]
+title = "test12"
 +++

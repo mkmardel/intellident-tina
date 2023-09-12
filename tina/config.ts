@@ -107,6 +107,28 @@ export default defineConfig({
             label: "Típus",
             options: ["team"],
           },
+          {
+            type: "object",
+            name: "test",
+            label: "Teszt",
+            list: true,
+            ui: {
+              itemProps: (item) => {
+                // Field values are accessed by item?.<Field name>
+                return { label: item?.title };
+              },
+              defaultItem: {
+                title: "test1",
+              },
+            },
+            fields: [
+              {
+                type: "string",
+                name: "title",
+                label: "Név",
+              },
+            ],
+          },
         ],
       },
     ],

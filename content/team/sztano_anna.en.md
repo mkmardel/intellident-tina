@@ -20,5 +20,12 @@ bio = """
 Terveim között szerepel az iTop szájhigiénia és a dentálhigiénikus képzés elvégzése.\r
 Nyelvismeret: angol, német\r
 """
+
+[[test]]
+title = "test1"
+
+[[test]]
+title = "test12"
 +++
+
 

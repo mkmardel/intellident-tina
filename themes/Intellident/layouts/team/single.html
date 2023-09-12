@@ -4,6 +4,9 @@
     <!-- Start main-content -->
     <div class="main-content">
         <section>
+            {{ range $index, $element := .Params.test }}
+                {{ $element.title }}
+            {{end}}
             <div class="container">
                 <div class="section-content">
                     <div class="row text-center">
