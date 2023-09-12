@@ -1,0 +1,44 @@
+<section id="treatments" class="bg-silver-light">
+    <div class="container">
+      <div class="section-title text-center">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <div class="title-icon">
+              <img loading="lazy" class="mb-10" alt="title">
+            </div>
+            <h2 class="text-uppercase mt-0 line-height-1">{{ T "treatments" }}</h2>
+            <p>{{ .Params.treatments_sub }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="section-content">
+        <div class="row wow fadeInRight">
+
+          {{ range where .Site.Pages ".Params.types" "treatments" }}
+
+          <div class="col-xs-12 col-sm-6 col-md-4 mx-auto">
+
+            <div class="icon-box iconbox-theme-colored2 left media pl-10 pt-10">
+              <a style="z-index:10" href="{{ .Permalink}}" class=" icon bg-theme-colored icon-circled icon-border-effect effect-circled media-left pull-left">
+                <img
+                  class="img-services" loading="lazy" src="{{.Params.image}}" alt="{{.Params.title}}">
+                </a>
+              <div class="media-body {{if (not .Params.short_description)}}media-title-only{{end}}">
+                <a  style="z-index:10" href="{{ .Permalink}}">
+                  <h3 class="media-heading heading">{{.Params.title}}</h3>
+                  {{if .Params.short_description}}
+                    <p>{{.Params.short_description}}</p>
+                  {{ end }}
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {{end}}
+          <div class="col-sm-12 text-center">
+            <a href='{{ "/pages/prices/" | absLangURL }}' class="btn btn-theme-colored btn-lg btn-circled">{{ T "view_prices" }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

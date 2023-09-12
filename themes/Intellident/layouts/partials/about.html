@@ -1,0 +1,23 @@
+<section id="about">
+    <div class="container">
+      <div class="section-content">
+        <div class="row">
+          <div class="col-md-5">
+            <div class="video-container">
+              <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/zu3RLccRErM"
+                frameborder="0"
+                allow="encrypted-media;"
+                allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="col-md-7">
+            <h2 class="font-size-38 mt-0">{{ .Params.motto | safeHTML}}</h2>
+            <p class="lead">
+              {{ .Params.short_bio }}
+            </p>
+            <a class="btn btn-theme-colored btn-lg btn-circled mt-10" href='{{ "/pages/about/" | absLangURL }}'>{{T "read_more"}}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

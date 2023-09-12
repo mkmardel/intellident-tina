@@ -1,0 +1,22 @@
+---
+label: Price Item
+hide_body: true
+fields:
+- type: text
+  name: prices
+  label: prices
+  hidden: true
+  default: items
+- type: text
+  name: title
+  label: Árlista elem neve
+  config:
+    required: true
+- type: text
+  name: note
+  label: Megjegyzés
+- type: text
+  name: price
+  label: Összeg
+  config:
+    required: true

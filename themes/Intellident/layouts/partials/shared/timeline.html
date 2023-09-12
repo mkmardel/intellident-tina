@@ -1,0 +1,27 @@
+<section>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="vertical-masonry-timeline-wrapper">
+            <ul class="vertical-masonry-timeline">
+              {{ range $index, $element := .timeline }}
+                <li class="each-masonry-item wow fadeInDown" data-wow-duration="1.5s" data-wow-offset="10">
+                    <div class="timeline-block" style="border-radius: 8px;">
+                      <span class="timeline-post-format"><i class="fa fa-user"></i></span>
+                      <article class="post clearfix">
+                        <div class="entry-header">
+                          <h5 class="entry-title">{{ index $element 0}}</h5>
+                        </div>
+                        <div class="entry-content">
+                          {{ index $element 1}}
+                        </div>
+                      </article>
+                    </div>
+                </li>
+                {{ end }}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

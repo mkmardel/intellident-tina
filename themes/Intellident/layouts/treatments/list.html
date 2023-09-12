@@ -1,0 +1,26 @@
+{{ define "main" }}
+  {{ partial "shared/section-title" . }}
+
+<!-- Section: Services --> 
+<section id="services">
+    <div class="container pb-50">
+      <div class="section-content">
+        <div class="row">
+            {{ range .Pages }}
+                <div class="col-sm-6 col-md-4 wow fadeInDown">
+                    <div class="icon-box text-center p-30 bg-deep mb-30 treatment-box " style="height: 430px;">
+                      <a href="{{.Permalink}}"><img loading="lazy" src="{{.Params.image}}" alt="{{.Params.title}}">
+                        <div class="features-details treatment-description">
+                            <h3>{{.Params.title}}</h3>
+                            <p>{{.Params.short_description}}</p>
+                        </div>
+                      </a>
+                      <a href="{{.Permalink}}" class="btn btn-border btn-circled btn-transparent btn-treatments">{{ T "read_more"}}</a>
+                    </div>
+                </div>
+            {{ end }}
+        </div>
+      </div>
+    </div>
+  </section>
+{{ end }}

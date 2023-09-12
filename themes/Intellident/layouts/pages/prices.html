@@ -1,0 +1,43 @@
+{{ define "main" }}
+  {{ partial "shared/section-title" . }}
+
+  <!-- Start main-content -->
+  <div class="main-content">
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-offset-2 col-sm-8 pb-30 pb-sm-20">
+            <h5>{{ .Params.validity }}</h5>
+          </div>
+          <div class="col-md-offset-2 col-sm-8 pb-30 pb-sm-20">
+            {{ range $index, $item := .Params.categories }}
+              {{ if ne $index 0}} | {{ end }}
+              <a href="#{{ $item }}">{{ $item }}</a>
+            {{end}}
+          </div>
+          
+          {{ $prices := .Params.prices }}
+          {{ range $category := .Params.categories }}
+            <div class="wow fadeInDown col-md-offset-2 col-md-8 col-xs-12 pb-30 pb-sm-20">
+              <span class="scroll-offset" id="{{ $category }}"></span>
+              <h3 class="title mb-30 line-bottom">{{ $category }}</h3>
+              <ul class="list-border-bottom no-padding">
+
+                {{ range $price := $prices }}
+                  {{ if eq $category $price.slug }}
+                    <li>
+                      <h5>{{ $price.title }}<span class="pull-right sm-pull-none sm-display-block flip font-weight-400">{{ $price.amount }}</span></h5>
+                      <p>{{ $price.description }}</p>
+                    </li>
+                  {{ end}}
+                {{ end }}
+                
+              </ul>
+            </div>
+          {{end}}
+        </div>
+      </div>
+    </section>
+  </div>
+    <!-- end main-content -->
+{{ end }}

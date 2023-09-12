@@ -1,0 +1,40 @@
+---
+label: CBCT
+hide_body: true
+fields:
+- type: text
+  name: title
+  label: title
+  hidden: true
+- type: text
+  name: layout
+  label: layout
+  hidden: true
+- type: text
+  name: types
+  label: types
+  hidden: true
+- type: file
+  name: image_1
+  label: 1. Fotó
+  default: "/uploads/images/cbct/1.jpg"
+- type: file
+  name: image_2
+  label: 2. Fotó
+  default: "/uploads/images/cbct/2.jpg"
+- type: text
+  name: head
+  label: Fejléc
+  config:
+    required: true
+- type: textarea
+  name: description
+  label: Leírás
+  config:
+    wysiwyg: true
+    schema:
+      format: html
+    required: true
+pages:
+- content/pages/cbct.en.md
+- content/pages/cbct.md

@@ -1,0 +1,28 @@
+{{ define "main" }}
+
+  <!-- Start main-content -->
+  <div class="main-content">
+    <!-- Section: home -->
+    <section id="home" class="divider">
+      <div class="container-fluid p-0">
+        {{ partial "revolution-slider" . }}
+      </div>
+    </section>
+
+    <!-- Section: home-boxes -->
+    {{ partial "listings/home-boxes" . }}
+
+    <!-- Section: about -->
+    {{ partial "about" . }}
+
+    <!-- Section: Services -->
+    {{ partial "listings/services" . }}
+
+    <!-- start Doctors Section:-->
+    {{ partial "listings/team" . }}
+
+    <!-- Section: Contact -->
+    {{ partial "map-contact" . }}
+  </div>
+
+{{ end }}
