@@ -15,9 +15,9 @@ import { treatmentsFields } from "./templates";
 const branch = process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || "main";
 
 export default defineConfig({
-  branch,
-  clientId: null, // Get this from tina.io
-  token: null, // Get this from tina.io
+  branch: "main",
+  clientId: "42447209-2f9d-405a-9f34-1f542092aa2a", // Get this from tina.io
+  token: "a573acacdf6581119383352f81c48c84c2b073c6", // Get this from tina.io
   client: { skip: true },
   build: {
     outputFolder: "admin",
