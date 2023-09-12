@@ -26,7 +26,7 @@ export default defineConfig({
   media: {
     tina: {
       mediaRoot: "",
-      publicFolder: "static",
+      publicFolder: "static/uploads",
     },
   },
   schema: {
@@ -774,7 +774,7 @@ export default defineConfig({
       },
       {
         format: "md",
-        label: "Főoldal",
+        label: "Főoldal (EN)",
         name: "f_oldal_en",
         path: "en/content",
         frontmatterFormat: "toml",
