@@ -1,8 +1,0 @@
-    {{ $customJS := resources.Get "/js/custom.js" }} 
-
-    {{ $secureFooterJS := slice $customJS  | resources.Concat "footer-bundle.js" | resources.Minify | resources.Fingerprint "sha512" }}
-    
-    <script
-        src="{{ $secureFooterJS.RelPermalink }}"
-        integrity="{{ $secureFooterJS.Data.Integrity }}"
-    ></script>
