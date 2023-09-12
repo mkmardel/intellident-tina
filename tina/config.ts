@@ -37,7 +37,7 @@ export default defineConfig({
         name: "f_oldal",
         path: "content",
         frontmatterFormat: "toml",
-        frontmatterDelimiters: "+++",
+        frontmatterDelimiters: "---",
         ui: {
           allowedActions: {
             create: false,
@@ -390,7 +390,7 @@ export default defineConfig({
         name: "kapcsolat",
         path: "content",
         frontmatterFormat: "toml",
-        frontmatterDelimiters: "+++",
+        frontmatterDelimiters: "---",
         ui: {
           allowedActions: {
             create: false,
@@ -511,7 +511,7 @@ export default defineConfig({
         name: "kezel_sek",
         path: "content/treatments",
         frontmatterFormat: "toml",
-        frontmatterDelimiters: "+++",
+        frontmatterDelimiters: "---",
         match: {
           include: "**/*",
           exclude: "_index",
@@ -533,7 +533,7 @@ export default defineConfig({
         name: "csapatunk",
         path: "content/team",
         frontmatterFormat: "toml",
-        frontmatterDelimiters: "+++",
+        frontmatterDelimiters: "---",
         match: {
           include: "**/*",
           exclude: "_index",
@@ -555,7 +555,7 @@ export default defineConfig({
         name: "_raink",
         path: "content/pages",
         frontmatterFormat: "toml",
-        frontmatterDelimiters: "+++",
+        frontmatterDelimiters: "---",
         ui: {
           allowedActions: {
             create: false,
@@ -639,7 +639,7 @@ export default defineConfig({
         name: "r_lunk",
         path: "content/pages",
         frontmatterFormat: "toml",
-        frontmatterDelimiters: "+++",
+        frontmatterDelimiters: "---",
         ui: {
           allowedActions: {
             create: false,
@@ -712,7 +712,7 @@ export default defineConfig({
         name: "cbct",
         path: "content/pages",
         frontmatterFormat: "toml",
-        frontmatterDelimiters: "+++",
+        frontmatterDelimiters: "---",
         ui: {
           allowedActions: {
             create: false,
@@ -778,7 +778,7 @@ export default defineConfig({
         name: "f_oldal",
         path: "content",
         frontmatterFormat: "toml",
-        frontmatterDelimiters: "+++",
+        frontmatterDelimiters: "---",
         ui: {
           allowedActions: {
             create: false,
@@ -1131,7 +1131,7 @@ export default defineConfig({
         name: "kapcsolat",
         path: "content",
         frontmatterFormat: "toml",
-        frontmatterDelimiters: "+++",
+        frontmatterDelimiters: "---",
         ui: {
           allowedActions: {
             create: false,
@@ -1252,7 +1252,7 @@ export default defineConfig({
         name: "kezel_sek",
         path: "content/treatments",
         frontmatterFormat: "toml",
-        frontmatterDelimiters: "+++",
+        frontmatterDelimiters: "---",
         match: {
           include: "**/*",
           exclude: "_index",
@@ -1274,7 +1274,7 @@ export default defineConfig({
         name: "csapatunk",
         path: "content/team",
         frontmatterFormat: "toml",
-        frontmatterDelimiters: "+++",
+        frontmatterDelimiters: "---",
         match: {
           include: "**/*",
           exclude: "_index",
@@ -1296,7 +1296,7 @@ export default defineConfig({
         name: "_raink",
         path: "content/pages",
         frontmatterFormat: "toml",
-        frontmatterDelimiters: "+++",
+        frontmatterDelimiters: "---",
         ui: {
           allowedActions: {
             create: false,
@@ -1380,7 +1380,7 @@ export default defineConfig({
         name: "r_lunk",
         path: "content/pages",
         frontmatterFormat: "toml",
-        frontmatterDelimiters: "+++",
+        frontmatterDelimiters: "---",
         ui: {
           allowedActions: {
             create: false,
@@ -1453,7 +1453,7 @@ export default defineConfig({
         name: "cbct",
         path: "content/pages",
         frontmatterFormat: "toml",
-        frontmatterDelimiters: "+++",
+        frontmatterDelimiters: "---",
         ui: {
           allowedActions: {
             create: false,
@@ -1519,7 +1519,7 @@ export default defineConfig({
         name: "megjelen_s",
         path: "content",
         frontmatterFormat: "toml",
-        frontmatterDelimiters: "+++",
+        frontmatterDelimiters: "---",
         ui: {
           allowedActions: {
             create: false,
@@ -1557,7 +1557,7 @@ export default defineConfig({
         name: "_rlap__zenet",
         path: "content/pages",
         frontmatterFormat: "toml",
-        frontmatterDelimiters: "+++",
+        frontmatterDelimiters: "---",
         ui: {
           allowedActions: {
             create: false,
