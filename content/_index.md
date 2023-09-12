@@ -1,4 +1,5 @@
 ---
+_template: content
 title: Főoldal
 slider_1:
   image: "/uploads/images/gallery/1.jpg"

@@ -1,4 +1,5 @@
 ---
+_template: contact
 title: Kapcsolat
 address: 1073 Bp., Erzsébet körút 48. II/11.
 short_address: Erzsébet körút 48. II/11.

@@ -1,4 +1,5 @@
 import { defineConfig } from "tinacms";
+import { useCMS } from "tinacms";
 
 export default defineConfig({
   branch: "main",
@@ -23,55 +24,88 @@ export default defineConfig({
         path: "content",
         match: {
           exclude: "*/*",
-          include: "{_index,_index.en}",
+          include: "",
         },
-        fields: [
-          {
-            type: "string",
-            name: "title",
-            label: "Title",
-            isTitle: true,
-            required: true,
+        ui: {
+          allowedActions: {
+            create: false,
+            delete: false,
           },
+        },
+        templates: [
           {
-            type: "object",
-            name: "slider_1",
-            label: "Slider 1",
+            name: "content",
+            label: "Főoldal",
             fields: [
-              {
-                type: "image",
-                name: "image",
-                label: "Kép",
-              },
               {
                 type: "string",
                 name: "title",
-                label: "Cím",
+                label: "Title",
+                isTitle: true,
+                required: true,
               },
               {
+                type: "object",
+                name: "slider_1",
+                label: "Slider 1",
+                fields: [
+                  {
+                    type: "image",
+                    name: "image",
+                    label: "Kép",
+                  },
+                  {
+                    type: "string",
+                    name: "title",
+                    label: "Cím",
+                  },
+                  {
+                    type: "string",
+                    name: "text",
+                    label: "Szöveg",
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            name: "contact",
+            label: "Kapcsolat",
+            fields: [
+              {
                 type: "string",
-                name: "text",
-                label: "Szöveg",
+                name: "title",
+                label: "Title",
+                isTitle: true,
+                required: true,
               },
             ],
           },
         ],
       },
       {
-        name: "contact",
-        label: "Kapcsolat",
-        path: "content",
+        name: "team",
+        label: "Csapat",
+        path: "content/team",
+        frontmatterFormat: "toml",
+        frontmatterDelimiters: "+++",
         match: {
           exclude: "*/*",
-          include: "contact",
+          include: "",
         },
         fields: [
           {
             type: "string",
             name: "title",
-            label: "Title",
+            label: "Név",
             isTitle: true,
             required: true,
+          },
+          {
+            type: "string",
+            name: "types",
+            label: "Típus",
+            options: ["team"],
           },
         ],
       },
