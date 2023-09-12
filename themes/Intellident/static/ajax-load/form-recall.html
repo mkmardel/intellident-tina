@@ -1,0 +1,70 @@
+<section class="no-bg">
+  <div class="container position-relative p-0 mt-90" style="max-width: 700px;">
+    <h2 class="bg-theme-colored p-15 mt-0 mb-0 text-white" id="rc-form-title">Visszahívást kérek
+      <!--  <br><span class="font-13">Request a Callback</span> -->
+    </h2>
+    <div class="section-content bg-white p-30">
+      <div class="row">
+        <div class="col-md-12">
+          <!-- Booking Form Starts -->
+          <p class="lead mb-20" id="rc-form-description">Kérjük, küldje el nevét és telefonszámát, hamarosan hívni fogjuk!</p>
+          <!--<p class="mb-20">Please, send your name and phone number, we will call you soon!</p>-->
+          <!-- Appointment Form -->
+
+          <form action="/pages/thank-you" id="popup_appointment_form" name="popup_appointment_form" netlify>
+            <div class="row">
+              <input type="hidden" name="subject" value="A páciens visszahívást kér">
+              <div class="col-sm-12">
+                <div class="form-group mb-10">
+                  <input id="form-name" name="páciens-neve" class="form-control required name" type="text" required="" placeholder="Név" aria-required="true">
+                </div>
+              </div>
+              <div class="col-sm-12">
+                <div class="form-group mb-10">
+                  <input id="form-phone" name="páciens-telefonszáma" class="form-control required phone" required="" inputmode="tel" type="text" placeholder="Telefonszám" aria-required="true">
+                </div>
+              </div>
+              <div class="col-sm-12">
+                <div class="form-group mb-10">
+                  <select name="idősáv" class="form-control">
+                    <option id="form-time-0" value="Bármikor hívhatjuk">Bármikor hívhatjuk</option>
+                    <option id="form-time-1" value="08:00 - 12:00">Csak 8 és 12 óra között</option>
+                    <option id="form-time-2" value="12:00 - 16:00">Csak 12 és 16 óra között</option>
+                    <option id="form-time-3" value="16:00 - 20:00">Csak 16 és 20 óra között</option>
+                  </select>
+                </div>
+              </div>
+              <input id="form-lang" type="hidden" name="Nyelv" value="">
+            </div>
+            <div class="form-group mb-10">
+              <div data-netlify-recaptcha="true"></div>
+            </div>
+            <div class="form-group mb-0 mt-20">
+              <button type="submit" id="form-submit" class="btn btn-dark btn-theme-colored" data-loading-text="Kérem várjon...">Küldés</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <button title="Bezárás (Esc)" type="button" class="mfp-close font-36">×</button>
+  </div>
+</section>
+
+<style>
+  @media (max-width: 445px) {
+    .g-recaptcha {
+      margin-bottom: 0px;
+      -webkit-transform: scale(0.77) !important;
+      -moz-transform: scale(0.77) !important;
+      -ms-transform: scale(0.77) !important;
+      -o-transform: scale(0.77) !important;
+      transform: scale(0.77) !important;
+      -webkit-transform-origin: 0 0 !important;
+      -moz-transform-origin: 0 0 !important;
+      -ms-transform-origin: 0 0 !important;
+      -o-transform-origin: 0 0 !important;
+      transform-origin: 0 0 !important;
+    }
+  }
+</style>
+<script defer src="/js/call-form.js"></script>

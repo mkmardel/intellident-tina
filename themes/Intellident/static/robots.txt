@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /uploads/images/
+Disallow: /uploads/
+Disallow: /ajax-load/
+
+Sitemap: https://www.intellident.hu/sitemap.xml

@@ -1,0 +1,26 @@
+{{ define "main" }}
+  {{ partial "shared/section-title" . }}
+
+  <!-- Section: about -->
+  <section class="">
+      <div class="container pb-0">
+        <div class="row">
+          <div class="wow fadeInLeft col-md-8">
+            <h4 class="text-uppercase text-theme-colored2 mt-sm-10">{{ .Params.head }}</h4>
+            <p class="lead text-justify mt-20">
+            {{ .Params.description | safeHTML }}
+            <div class="lead">
+              {{ with $.Site.GetPage "contact" }} {{ .Params.phone }} {{ end }}
+            </div>
+          </p>
+          </div>
+          <div class="wow fadeInRight col-md-4">
+            <img loading="lazy" src="{{ .Params.image_1 }}" alt="cbct">
+            <img loading="lazy" src="{{ .Params.image_2 }}" alt="cbct">
+          </div>
+        </div>
+      </div>
+      <div class="clearfix mb-30"></div>
+    </section>
+
+{{ end }}

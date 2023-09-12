@@ -1,0 +1,16 @@
+{{ define "main" }}
+{{ partial "shared/section-title" . }}
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+          <div class="m-auto text-center" style="filter: brightness(1.1);-webkit-filter: brightness(1.1);">
+            <img src="{{ .Params.image }}" alt="koszonjuk">
+          </div>
+          {{ .Params.content | safeHTML}}
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,42 @@
+<!-- Default Theme Style CSS -->
+{{ $theme := "/css/colors/theme-skin-color-set1.css" }}
+<!-- Get custom selected value -->
+{{ with $.Site.GetPage "/theme-settings"}}
+    {{ $themeId := (substr .Params.theme 6) }}
+    {{ $path := print ".css" | print $themeId | print "/css/colors/theme-skin-color-set" }}
+    {{ $theme = $path }}
+{{ end }}
+
+
+{{ $bootstrapCSS := resources.Get "/css/bootstrap.min.css" }}
+{{ $jqueryUiCSS := resources.Get "/css/jquery-ui.min.css" }}
+{{ $animateCSS := resources.Get "/css/animate.css" }}
+{{ $pluginCollectionCSS := resources.Get "/css/css-plugin-collections.css" }}
+{{ $menuzordCSS := resources.Get "/css/menuzord-megamenu.css" }}
+{{ $menuzordBoxedCSS := resources.Get "/css/menuzord-skins/menuzord-boxed.css" }}
+
+{{ $fontAwsomeCSS := resources.Get "/css/font-awesome.min.css" }}
+{{ $fontAwsomeAnimationCSS := resources.Get "/css/font-awesome-animation.min.css" }}
+{{ $peIconStrokeCSS := resources.Get "/css/pe-icon-7-stroke.css" }}
+{{ $elegantIconsCSS := resources.Get "/css/elegant-icons.css" }}
+{{ $icomoonCSS := resources.Get "/css/icomoon.css" }}
+{{ $ioniconsCSS := resources.Get "/css/ionicons.css" }}
+{{ $utilityClassesCSS := resources.Get "/css/utility-classes.css" }}
+{{ $flatSetDentalCSS := resources.Get "/css/flaticon-set-dental.css" }}
+{{ $flatSetMedicalCSS := resources.Get "/css/flaticon-set-medical.css" }}
+
+{{ $revolutionSettingsCSS := resources.Get "/css/revolution-slider/settings.css" }}
+{{ $revolutionLayersCSS := resources.Get "/css/revolution-slider/layers.css" }}
+{{ $revolutionNavCSS := resources.Get "/css/revolution-slider/navigation.css" }}
+
+{{ $styleMainCSS := resources.Get "/css/style-main.css" }}
+{{ $preloaderCSS := resources.Get "/css/preloader.css" }}
+{{ $customBootstrapMarginPaddingCSS := resources.Get "/css/custom-bootstrap-margin-padding.css" }}
+{{ $responsiveCSS := resources.Get "/css/responsive.css" }}
+{{ $themeSkinColor := resources.Get $theme }}
+
+{{ $secureCSS := slice $bootstrapCSS $jqueryUiCSS $animateCSS $pluginCollectionCSS $menuzordCSS $menuzordBoxedCSS $fontAwsomeCSS $fontAwsomeAnimationCSS $peIconStrokeCSS $elegantIconsCSS $icomoonCSS $ioniconsCSS $utilityClassesCSS $flatSetDentalCSS $flatSetMedicalCSS $styleMainCSS $preloaderCSS $customBootstrapMarginPaddingCSS $responsiveCSS $themeSkinColor $revolutionSettingsCSS $revolutionLayersCSS $revolutionNavCSS | resources.Concat "bundle.css" | resources.Minify | resources.Fingerprint "sha512" }}
+
+
+
+<link rel="stylesheet" href="{{ $secureCSS.RelPermalink }}" integrity="{{ $secureCSS.Data.Integrity }}" />

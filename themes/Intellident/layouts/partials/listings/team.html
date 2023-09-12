@@ -1,0 +1,39 @@
+<section id="team">
+    <div class="container">
+      <div class="section-title text-center">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <div class="title-icon">
+              <img loading="lazy" class="mb-10"alt="title">
+            </div>
+            <h2 class="text-uppercase mt-0 line-height-1">{{ T "our_team" }}</h2>
+            <p>{{ .Params.team_sub }}</p>
+          </div>
+        </div>
+        <!-- <img loading="lazy" id="swipe-gif" src="/images/swipe.gif" alt="swipe left" style="height: 40px;"> -->
+      </div>
+
+      <div class="row mtli-row-clearfix text-center wow fadeInLeft">
+        <div class="col-md-12">
+          <div id="owl-carousel" class="owl-carousel-4col">
+            {{ range where .Site.Pages ".Params.types" "team" }}
+              <div class="item">
+                <a href="{{.Permalink}}">
+                  <img loading="lazy" class="team-img mb-10" alt="doctor"  width="142" height="144" src="{{.Params.image}}">
+                  <h4 class="text-uppercase font-weight-600 m-5">{{.Params.title}}</h4>
+                  <h6 class="text-theme-colored font-12 font-weight-400 mt-0">
+                    {{ range $index, $element := .Params.positions }}{{if lt 0 $index }}, {{end}}{{$element}}{{end}}
+                  </h6>
+                </a>
+              </div>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-12 mt-30 text-center">
+        <a href='{{ "/team/" | absLangURL }}' class="btn btn-theme-colored btn-lg btn-circled">{{ T "complete_team" }}</a>
+      </div>
+
+    </div>
+  </section>

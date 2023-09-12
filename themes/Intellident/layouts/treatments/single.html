@@ -1,0 +1,76 @@
+{{ define "main" }}
+<div class="main-content">
+    {{ partial "shared/section-title" . }}
+
+    <!-- Section: Services -->
+    <section>
+        <div class="container" style="padding-top:20px;">
+           
+            <div class="row mtli-row-clearfix">
+                <div class="wow fadeInLeft col-sm-8 col-md-8 col-lg-8">
+                    <div class="campaign maxwidth500 mb-sm-30">
+                        <div class="thumb">
+                            <!-- <img loading="lazy" src="{{.Params.banner_image}}" alt="treatment banner" class="img-fullwidth"> -->
+                            <div class="campaign-overlay"></div>
+                        </div>
+                    </div>
+                    <div class="event-details" style="margin-top:20px">
+                        <div class="row">
+                            <div class="col-xs-12 text-justify">
+                                {{.Params.description | safeHTML}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-4">
+                    <div class="wow fadeInRight sidebar sidebar-right mt-sm-30">
+                        <div class="widget">
+                            <h5 class="widget-title line-bottom">Kezelések</h5>
+                            <ul class="list-divider list-border list check">
+                                {{ $current := . }}
+
+                                {{ range where .Site.Pages ".Params.types" "treatments" }}
+                                
+                                {{$colorClass := ""}}
+                                {{$url := .Permalink}}
+                                {{if eq .RelPermalink $current.RelPermalink}}    
+                                    {{$colorClass = "text-theme-colored"}}
+                                    {{$url = "#"}}
+                                {{end}}
+
+                                
+                                <li><a class="{{$colorClass}}" href="{{$url}}">{{.Params.title}}</a></li>
+                                  
+                                {{end}}
+                            </ul>
+                        </div>
+                        {{ with .Site.GetPage "contact" }}
+                        <div class="widget wow fadeInRight">
+                            <div class="border-10px p-30">
+                                <h5><i class="fa fa-clock-o text-theme-colored"></i> Nyitvatartás</h5>
+                                <div class="opening-hours text-left">
+                                    <ul class="list-unstyled">
+                                        <li class="clearfix line-height-1"> <span> {{ .Params.opening_line_1.days}} </span>
+                                            <div class="value"> {{ .Params.opening_line_1.time}} </div>
+                                        </li>
+                                        <li class="clearfix line-height-1"> <span> {{ .Params.opening_line_2.days}} </span>
+                                            <div class="value">{{ .Params.opening_line_2.time}} </div>
+                                        </li>
+                                        <li class="clearfix line-height-1"> <span> {{ .Params.opening_line_3.days}} </span>
+                                            <div class="value"> {{ .Params.opening_line_3.time}} </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        {{ end }}
+                       
+                    </div>
+                </div>
+            </div>
+         
+        </div>
+    </section>
+</div>
+<!-- end main-content -->
+{{ end }}

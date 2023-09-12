@@ -1,0 +1,143 @@
+<!-- Header -->
+<header id="header" class="header modern-header modern-header-theme-colored2">
+<div class="header-middle p-0 bg-light xs-text-center pb-30 pb-sm-0">
+    <div class="container pt-20 pb-20">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-3">
+        <a class="logo-top menuzord-brand pull-left flip sm-pull-center mb-15" href="/"><img loading="lazy" src="/images/header/logo.png" alt="logo"></a>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-9">
+        {{ with .Site.GetPage "contact" }}
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-4 hidden-xs">
+
+                <div class="widget no-border sm-text-center mt-10 mb-10 m-0">
+
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <i class="fa fa-envelope text-theme-colored font-32 mt-5 mr-sm-0 sm-display-block pull-left flip sm-pull-none"></i>
+                        </div>
+                        <div class="col-xs-10">
+                            <h5 class="font-14 text-black m-0 ml-20 ml-sm-0" style="line-height: 43px;">&nbsp;{{ .Params.email }}</h5>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-xs-6 col-sm-4 col-md-4">
+                
+                <div class="widget no-border sm-text-center sm-mt-0 mt-10 mb-10 m-0">
+                    <a href="tel:{{.Params.phone}}">
+
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <i class="fa fa-phone-square text-theme-colored font-32 mt-5 mr-sm-0 sm-display-block pull-left flip sm-pull-none"></i>
+                        </div>
+                        <div class="col-xs-10 xs-phone">
+                        <h5 class="font-14 text-black m-0 ml-20 ml-sm-0 sm-font-12" style="line-height: 43px;">{{ .Params.phone }}</h5>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="col-xs-6 col-sm-4 col-md-4 hidden-sm hidden-md hidden-lg">
+                <div class=" no-border sm-text-right mt-10 ">
+                    <a href='{{if eq $.Site.Language "en"}}/en{{end}}/#contact' class="btn btn-theme-colored btn-lg btn-circled" >{{ T "contact_us" }}</a>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-4 col-md-4 hidden-xs">
+
+                <div class="widget no-border sm-text-center mt-10 mb-10 m-0">
+                    <div class="row">
+                        <div class="col-xs-2">
+                            <i class="fa fa-building-o text-theme-colored font-32 mt-5 mr-sm-0 sm-display-block pull-left flip sm-pull-none"></i>
+                        </div>
+                        <div class="col-xs-10">
+                            <h5 class="font-14 text-black m-0" style="line-height: 43px; min-width: 161px !important;">{{ .Params.short_address }}</h5>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        {{ end }}
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-2 sm-text-center"></div>
+    </div>
+    </div>
+</div>
+<div class="header-nav">
+    <div class="header-nav-wrapper navbar-scrolltofixed">
+    <div class="container">
+        <nav id="menuzord" class="menuzord blue">
+
+            <!-- COLLAPSE BTN -->
+            <span class="menu-mobile">
+                <a class="menuzord-brand pull-left flip mb-15" href="/"><img src="/images/footer/logo-white.png" alt="logo"></a>
+                <span id="custom-menu-toggle" class="we-nav-collapse"><i class="fa fa-bars"></i></span>
+            </span>
+
+            <!-- MENU -->
+            {{ $pages := .Site.Pages }}
+            <ul class="menuzord-menu">
+                {{ $current := . }}
+                {{ range $element := site.Menus.main }}
+                    {{ $active := or ($current.IsMenuCurrent "nav" .) ($current.HasMenuCurrent "nav" .) }}
+                    {{ $active = or $active (eq .Name $current.Title) }}
+                    {{ if .Identifier }}
+                        {{ $pre := .Identifier}}
+                        <li class="{{ if $active }}active{{ end }}"><a href="{{ .URL }}">{{ .Name }}</a>
+                            <ul class="dropdown">
+                                {{ range (where $pages ".Params.types" $pre) }}
+                                    <li><a href="{{ .Permalink }}">{{ .Params.title | upper }}</a></li>
+                                {{ end }}
+                            </ul>
+                        </li>
+                    {{ else }}
+                        <li class="{{ if $active }}active{{ end }}"><a href="{{ .URL }}">{{ .Name }}</a></li>
+                    {{ end }}
+                {{ end }}
+                <li>
+                    {{ range $.Site.Home.AllTranslations }} {{ if ne .Language
+                        $.Site.Language }}
+                            <a href="{{ .Permalink }}"><i class="fa fa-flag mr-10"></i>{{ .Language.LanguageName }}</a>
+                        {{ end }}
+                    {{ end }}
+                </li>
+                <li class="active pull-right"><a href="/ajax-load/form-recall.html" class="ajaxload-popup font-15" style="line-height: 20px;"><i class="fa fa-phone-square mr-10 font-28"></i><span class="btn-modal-text"> {{ T "callback" }}</span></a></li>
+            </ul>
+        </nav>
+    </div>
+    </div>
+</div>
+</header>
+
+<div id="nav-overlay" class="overlay">
+
+    <!-- Button to close the overlay navigation -->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  
+    <!-- Overlay content -->
+    <div class="overlay-content">
+        {{ range $element := site.Menus.main }}
+            <a href="{{ .URL }}" onclick="closeNav()">
+                <i class="{{ .Pre }}"></i>&nbsp;&nbsp;
+                {{ .Name }}</a>
+        {{ end }}
+        {{ range $.Site.Home.AllTranslations }} {{ if ne .Language
+            $.Site.Language }}
+                <a href="{{ .Permalink }}">
+                    <i class="fa fa-flag"></i>&nbsp;&nbsp;
+                    {{ .Language.LanguageName }}</a>
+            {{ end }}
+        {{ end }}
+        <a href="/ajax-load/form-recall.html" onclick="closeNav()" class="ajaxload-popup">
+            <i class="fa fa-phone-square"></i>&nbsp;&nbsp;
+            {{ T "callback" }}</a>
+    </div>
+  
+  </div>
