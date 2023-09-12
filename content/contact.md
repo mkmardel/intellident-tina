@@ -1,10 +1,12 @@
 ---
+title: Kapcsolat
 address: 1073 Bp., Erzsébet körút 48. II/11.
 short_address: Erzsébet körút 48. II/11.
 phone: "+36 30-185-8888"
 email: info@intellident.hu
 facebook: intellidentbudapest
-footer_description: Rendelőnket 2019-ben hoztuk létre azzal a céllal, hogy egy emberközeli,
+footer_description:
+  Rendelőnket 2019-ben hoztuk létre azzal a céllal, hogy egy emberközeli,
   barátságos hangulatú, de a szakma legfrissebb irányelveit szem előtt tartó ellátást
   tudjunk nyújtani pácienseink számára.
 opening_line_1:
@@ -16,5 +18,4 @@ opening_line_2:
 opening_line_3:
   days: Szo - Vas
   time: Zárva
-
 ---
