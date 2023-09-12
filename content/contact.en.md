@@ -1,3 +1,7 @@
++++
+_template = "contact"
++++
+
 ---
 address: 1073 Budapest, Erzsébet blvd. 48. II/11.
 short_address: Erzsébet blvd. 48. II/11.

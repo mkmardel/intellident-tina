@@ -1,3 +1,7 @@
++++
+_template = "about_template"
++++
+
 ---
 title: About Us
 layout: about

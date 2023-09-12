@@ -1,3 +1,7 @@
++++
+_template = "prices"
++++
+
 ---
 title: Áraink
 layout: prices

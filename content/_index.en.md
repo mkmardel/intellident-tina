@@ -1,3 +1,7 @@
++++
+_template = "homepage"
++++
+
 ---
 title: Home
 slider_1:

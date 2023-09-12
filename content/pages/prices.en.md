@@ -1,3 +1,7 @@
++++
+_template = "prices_en"
++++
+
 ---
 title: Prices
 layout: prices

@@ -1,3 +1,7 @@
++++
+_template = "cbct"
++++
+
 ---
 title: CBCT
 layout: cbct

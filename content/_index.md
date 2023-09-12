@@ -1,3 +1,7 @@
++++
+_template = "homepage"
++++
+
 ---
 title: Főoldal
 slider_1:

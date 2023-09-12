@@ -1,3 +1,7 @@
++++
+_template = "thank_you"
++++
+
 ---
 title: Köszönjük
 layout: thank-you
